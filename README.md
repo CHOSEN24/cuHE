@@ -32,6 +32,8 @@ Compile
 	cd cuhe
 	cmake ./
 	make
+	
+	cmake --no-warn-unused-cli -DGCC_CUDA_VERSION:STRING=gcc-8 "-DGPU_ARCH:STRING=30;35" -DCMAKE_EXPORT_COMPILE_COMMANDS:BOOL=TRUE -DCMAKE_BUILD_TYPE:STRING=Release -DCMAKE_C_COMPILER:FILEPATH=/usr/bin/gcc-9 -DCMAKE_CXX_COMPILER:FILEPATH=/usr/bin/g++-9 -H/home/chuck/projects/cuHE/examples/BFV -B/home/chuck/projects/cuHE/build -G "Unix Makefiles"
 
 options to cmake command defaults are:
 
